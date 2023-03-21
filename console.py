@@ -157,7 +157,7 @@ class HBNBCommand(cmd.Cmd):
 
         new_instance = HBNBCommand.classes[name]()
         for k, v in kwargs.items():
-            new_instance.__dict__[key] = v
+            new_instance.__dict__[k] = v
 
         storage.save()
 
