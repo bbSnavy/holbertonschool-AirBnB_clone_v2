@@ -156,11 +156,8 @@ class HBNBCommand(cmd.Cmd):
             kwargs[key] = val
 
         new_instance = HBNBCommand.classes[name]()
-        for key in new_instance.__dict__:
-            for k, v in kwargs.items():
-                if k == key:
-                    new_instance.__dict__[key] = v
-                    break
+        for k, v in kwargs.items():
+            new_instance.__dict__[key] = v
 
         storage.save()
 
