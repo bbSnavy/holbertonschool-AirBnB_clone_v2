@@ -146,7 +146,7 @@ class HBNBCommand(cmd.Cmd):
                     continue
                     
                 val.replace('_', ' ')
-            if val.isnumeric():
+            elif val.isnumeric():
                 val = int(val)
             elif val.replace('.', '').isnumeric():
                 val = float(val)
