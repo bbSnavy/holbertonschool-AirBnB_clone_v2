@@ -137,7 +137,7 @@ class HBNBCommand(cmd.Cmd):
                 raw = val
                 val = val[1:-1]
                 flg = False
-                for i, c in val:
+                for i, c in enumerate(val):
                     if c == '"' and val[i-1] != '\\':
                         flg = True
                         break
