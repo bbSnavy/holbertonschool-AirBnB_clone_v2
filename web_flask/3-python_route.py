@@ -21,6 +21,7 @@ def croute(text: str):
     return "C %s" % text.replace('_', ' ')
 
 
+@app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pyroute(text: str = 'is cool'):
     return 'Python %s' % text.replace('_', ' ')
