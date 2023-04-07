@@ -18,7 +18,7 @@ def index():
 
 @app.route('/c/<text>', strict_slashes=False)
 def croute(text: str):
-    return "C%s" % text.replace('_', ' ')
+    return "C %s" % text.replace('_', ' ')
 
 
 if __name__ == '__main__':
